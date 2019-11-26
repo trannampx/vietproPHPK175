@@ -1,0 +1,11 @@
+<?php
+session_start();
+    $prdid=$_GET['prd_id']; 
+    if(isset($_SESSION['sa'][$prdid]))
+    {
+     $_SESSION['sa'][$prdid]++;
+    }else{
+     $_SESSION['sa'][$prdid]=1;
+    }
+    header('location:../../index.php?page_layout=cart');
+?>
